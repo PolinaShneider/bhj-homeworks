@@ -5,7 +5,7 @@ let speed = 0;
 
 const changeRotator = (array) => {
     clearInterval(interval);
-    for(let i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         array[i].className = "rotator__case";
     }
     numberActive++;
