@@ -39,16 +39,16 @@ function getRandomBotMessage(botMessageList) {
     return botMessageList[Math.floor(Math.random() * botMessageList.length)];
 }
 
-chat.addEventListener("click", event => {
+chat.addEventListener("click", () => {
     chat.classList.add("chat-widget_active");
 });
 
 chat.addEventListener("keydown", event => {
-    if(event.code !== "Enter") {
+    if (event.code !== "Enter") {
         return;
     }
 
-    if(input.value.length === 0) {
+    if (input.value.length === 0) {
         return;
     }
 
@@ -61,13 +61,13 @@ chat.addEventListener("keydown", event => {
 
 
 
-input.addEventListener("focus", event => {
+input.addEventListener("focus", () => {
     timeOut = setTimeout(() => {
         chatArea.innerHTML += createBotMessage("Есть вопрос?");
     }, 30000);
 });
 
 
-input.addEventListener("blur", event => {
+input.addEventListener("blur", () => {
     clearTimeout(timeOut);
 });

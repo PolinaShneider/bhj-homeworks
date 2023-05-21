@@ -5,10 +5,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .cart__product {
   position: relative;
+  flex-direction: column;
+  display: flex;
 }
 .cart__product-count {
   position: absolute;
